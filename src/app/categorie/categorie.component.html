@@ -1,0 +1,3 @@
+<h3>{{ categorie.name }}</h3>
+<app-produit *ngFor="let produit of categorie.products"
+[produit]="produit" quantite="{{produitsSelectionnes.get(produit.id)}}" (ajouterPanier)="ajouterElement($event)" (retirerPanier)="retirerElement($event)"></app-produit>

@@ -1,0 +1,12 @@
+<div class="container well well-sm">
+<div class="row">
+      <h2 class="col-sm-3">{{produit.name}}</h2>
+      <div class="col-sm-3"><img  src="{{produit.image}}" width="100"/></div>
+      <span class="col-sm-3"><kbd>{{produit.price}} euros</kbd></span>
+      <div class="col-sm-3">
+        <button type="button" class="btn btn-primary btn-xs" (click)="ajouterClic()">+</button>
+      <button type="button" class ="btn btn-danger btn-xs" ngClass="{{quantite==0?'disabled':'enabled'}}" (click)="retirerClic()">-</button>
+      <span class ="badge">{{quantite}}</span>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div>
+<h3>Panier</h3>
+<table class="table table-hover table-condensed">
+    <thead>
+      <tr>
+        <th>Produit</th>
+        <th>Quantité</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of panier.elements.values()">
+        <td>{{ element.name }}</td>
+        <td>{{ element.quantite }}</td>
+        <td><button type="button" class="btn btn-primary btn-xs" (click)="ajouterClic(element.id)">+</button>
+      <button type="button" class="btn btn-danger btn-xs" (click)="retirerClic(element.id)">-</button></td>
+      </tr>  
+    </tbody>
+  </table>
+  <span>Total: {{total}}</span>
+</div>
